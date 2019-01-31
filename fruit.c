@@ -74,7 +74,7 @@ int main()
 		printf("Start\n");
 		printf("sizeof cJSON_Print(fruit): %ld\n", sizeof(cJSON_PrintUnformatted(fruit)));
 		
-		fruit_list[fruitCnt] = (char *) malloc(sizeof(cJSON_PrintUnformatted(fruit)+5));
+		fruit_list[fruitCnt] = (char *) malloc(10*sizeof(cJSON_PrintUnformatted(fruit)));
 
 		printf("sizeof fruit_list[fruitCnt]: %ld\n", sizeof(fruit_list[fruitCnt]));
 
