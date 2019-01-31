@@ -1,0 +1,19 @@
+{
+	"fruit": [
+		{
+			"banana": {
+				"color": "yellow"
+			}
+		},
+		{
+			"lemon": {
+				"color": "yellow"
+			}
+		},
+		{
+			"lime": {
+				"color": "green"
+			}
+		}
+	]
+}
