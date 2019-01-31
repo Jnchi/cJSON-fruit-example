@@ -5,5 +5,5 @@ default: fruit
 clean:
 	@rm fruit
 
-fruit: clean
+fruit: 
 	gcc -o fruit fruit.c cJSON.c -lm
