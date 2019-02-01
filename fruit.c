@@ -31,7 +31,7 @@ char* load_file(char const* path)
 
 int main()
 {
-	cJSON *fruit = NULL, *fruits = NULL, *fruit_j = NULL;
+	cJSON *fruit = NULL, *fruits = NULL, *fruit_j = NULL, *fruit_obj = NULL;
 	char *fruits_list = load_file("fruits.json");
 
 	printf("Fruit List: %s\n", fruits_list);
@@ -79,6 +79,15 @@ int main()
 		printf("sizeof fruit_list[fruitCnt]: %ld\n", sizeof(fruit_list[fruitCnt]));
 
 	        printf("fruit: %s\n", cJSON_PrintUnformatted(fruit));
+
+	        cJSON_ArrayForEach(fruit_obj, fruit)
+		{
+		    cJSON *color = cJSON_GetObjectItem(fruit_obj, "color");
+		    if(color && color != NULL)
+		    {
+                        printf("color: %s\n", cJSON_PrintUnformatted(color));
+		    }
+		}
 
 		char *string = cJSON_PrintUnformatted(fruit);
 	        printf("fruit string: %s\n", string);
